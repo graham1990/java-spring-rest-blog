@@ -14,4 +14,7 @@ public interface PostRepository extends JpaRepository<Post, Long> {
 	@RestResource(rel="contains-title", path="containsTitle")
 	public List<Post> findByTitleContaining(String title);	
 	// Allows search http://localhost:8080/posts/search/findByTitleContaining?title=Smart
+
+	//http://localhost:8080/posts/search/findByAuthor_Lastname?lastname=Holderness
+	public List<Post> findByAuthor_Lastname(String lastname);
 }
